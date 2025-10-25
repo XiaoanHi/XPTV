@@ -10,7 +10,7 @@ const headers = {
 const appConfig = {
   ver: 1,
   title: "独播库",
-  site: "https://vid.dbokutv.com",
+  site: "https://www.dbku.tv",
   tabs: [{
     name: '首页',
     ext: {
@@ -135,11 +135,11 @@ async function getPlayinfo(ext) {
     player = decodeURIComponent(player)
   } else if (obj.encrypt == 2) {
     player = decodeURIComponent(base64decode(player))
-    const data2 = (await $fetch.get(`${appConfig.site}/static/player/vidjs25.php`, {
-      headers
-    })).data
-    const sign = data2.match(/var encodedRkey = encodeURIComponent\('(.*)'\);/)[1]
-    player = `${player}?sign=${encodeURIComponent(sign)}`
+    // const data2 = (await $fetch.get(`${appConfig.site}/static/player/vidjs25.php`, {
+    //   headers
+    // })).data
+    // const sign = data2.match(/var encodedRkey = encodeURIComponent\('(.*)'\);/)[1]
+    // player = `${player}?sign=${encodeURIComponent(sign)}`
   } else if (obj.encrypt == 3) {
     player = player.substring(8, player.length)
     player = base64decode(player)
