@@ -131,9 +131,9 @@ async function getPlayinfo(ext) {
   })
   let obj = JSON.parse(data.match(/var player_.*?=(.*?)</)[1])
   let player = obj.url
-  if (obj.encrypt == 1) {
+  if (obj.encrypt == 2) {
     player = decodeURIComponent(player)
-  } else if (obj.encrypt == 2) {
+  } else if (obj.encrypt == 1) {
     player = decodeURIComponent(base64decode(player))
     const data2 = (await $fetch.get(`${appConfig.site}/static/player/vidjs25.php`, {
       headers
