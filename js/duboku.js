@@ -20,27 +20,27 @@ const appConfig = {
   }, {
     name: '电影',
     ext: {
-      url: '/vodtype/1-1.html'
+      url: '/vodtype/1.html'
     },
   }, {
     name: '连续剧',
     ext: {
-      url: '/vodtype/2-1.html',
+      url: '/vodtype/2.html',
     },
   }, {
     name: '综艺',
     ext: {
-      url: '/vodtype/3-1.html',
+      url: '/vodtype/3.html',
     },
   }, {
     name: '动漫',
     ext: {
-      url: '/vodtype/4-1.html'
+      url: '/vodtype/4.html'
     },
   }, {
     name: '港剧',
     ext: {
-      url: '/vodtype/20-1.html'
+      url: '/vodtype/20.html'
     },
   }]
 }
