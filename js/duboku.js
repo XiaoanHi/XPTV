@@ -145,6 +145,7 @@ async function getPlayinfo(ext) {
     player = base64decode(player)
     player = player.substring(8, (player.length) - 8)
   }
+  $print(`***playurl: ${player}`)
   return jsonify({
     urls: [ player ],
   })
