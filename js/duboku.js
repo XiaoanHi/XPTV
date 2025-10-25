@@ -2,15 +2,15 @@
 const cheerio = createCheerio()
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
 const headers = {
-  'Referer': 'https://tv.gboku.com/',
-  'Origin': 'https://tv.gboku.com',
+  'Referer': 'https://www.dbku.tv/',
+  'Origin': 'https://www.dbku.tv',
   'User-Agent': UA,
 }
 
 const appConfig = {
   ver: 1,
   title: "独播库",
-  site: "https://tv.gboku.com",
+  site: "https://www.dbku.tv",
   tabs: [{
     name: '首页',
     ext: {
