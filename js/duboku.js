@@ -10,7 +10,7 @@ const headers = {
 const appConfig = {
   ver: 1,
   title: "独播库",
-  site: "https://www.dbku.tv",
+  site: "https://vid.dbokutv.com",
   tabs: [{
     name: '首页',
     ext: {
@@ -131,9 +131,9 @@ async function getPlayinfo(ext) {
   })
   let obj = JSON.parse(data.match(/var player_.*?=(.*?)</)[1])
   let player = obj.url
-  if (obj.encrypt == 2) {
+  if (obj.encrypt == 1) {
     player = decodeURIComponent(player)
-  } else if (obj.encrypt == 1) {
+  } else if (obj.encrypt == 2) {
     player = decodeURIComponent(base64decode(player))
     const data2 = (await $fetch.get(`${appConfig.site}/static/player/vidjs25.php`, {
       headers
